@@ -1,0 +1,30 @@
+{
+  "domain": "corp.lab.test",
+  "netbios": "CORPLAB",
+  "nodes": [
+    {
+      "name": "DC01",
+      "ip": "10.77.10.10",
+      "gateway": "10.77.10.1",
+      "network": "AD-ID"
+    },
+    {
+      "name": "SRV01",
+      "ip": "10.77.20.20",
+      "gateway": "10.77.20.1",
+      "network": "AD-SRV"
+    },
+    {
+      "name": "WS01",
+      "ip": "10.77.30.30",
+      "gateway": "10.77.30.1",
+      "network": "AD-CLIENT"
+    },
+    {
+      "name": "AUDIT01",
+      "ip": "10.77.30.50",
+      "gateway": "10.77.30.1",
+      "network": "AD-CLIENT"
+    }
+  ]
+}

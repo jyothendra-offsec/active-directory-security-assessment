@@ -1,0 +1,13 @@
+evidence/*
+!evidence/README.md
+*.evtx
+*.ccache
+*.kirbi
+*.pcap*
+*.zip
+*.iso
+*.vdi
+*.vmdk
+*.key
+.env
+__pycache__/

@@ -1,0 +1,9 @@
+tool,version,source_url,sha256,recorded_utc
+Windows Server,,,,
+Windows client,,,,
+VirtualBox,,,,
+BloodHound CE,,,,
+SharpHound CE,,,,
+PowerView,,,,
+Impacket,,,,
+nftables,,,,

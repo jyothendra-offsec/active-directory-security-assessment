@@ -1,0 +1,9 @@
+test_id,activity,status,start_utc,end_utc,source,target,identity,evidence_id,retest_status
+1,Baseline health,NOT RUN,,,,,,,NOT RUN
+2,Segmentation,NOT RUN,,,,,,,NOT RUN
+3,Directory enumeration,NOT RUN,,,,,,,NOT RUN
+4,Kerberoasting,NOT RUN,,,,,,,NOT RUN
+5,Password spray validation,NOT RUN,,,,,,,NOT RUN
+6,Pass-the-Hash,NOT RUN,,,,,,,NOT RUN
+7,Local privilege relationship,NOT RUN,,,,,,,NOT RUN
+8,Golden Ticket manual exercise,NOT RUN,,,,,,,NOT RUN

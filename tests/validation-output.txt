@@ -1,0 +1,5 @@
+PASS topology consistency
+PASS local Markdown links
+PASS CSV schemas
+PASS execution status remains unclaimed
+PASS PowerShell tree-sitter grammar (9 scripts; not runtime validation)

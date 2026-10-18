@@ -1,0 +1,23 @@
+#!/usr/sbin/nft -f
+# Load only on a dedicated disposable FW01 router. Interface names are irrelevant;
+# configure exactly the three lab interfaces and NO internet-facing adapter.
+flush ruleset
+table inet lab {
+ chain input {
+  type filter hook input priority 0; policy drop;
+  iifname "lo" accept
+  ct state established,related accept
+  ip saddr {10.77.10.0/24,10.77.20.0/24,10.77.30.0/24} icmp type echo-request accept
+ }
+ chain forward {
+  type filter hook forward priority 0; policy drop;
+  ct state invalid drop
+  ct state established,related accept
+  ip saddr {10.77.20.0/24,10.77.30.0/24} ip daddr 10.77.10.10 tcp dport {53,88,135,389,445,464,3268,49152-65535} counter accept
+  ip saddr {10.77.20.0/24,10.77.30.0/24} ip daddr 10.77.10.10 udp dport {53,88,123,389,464} counter accept
+  ip saddr {10.77.20.0/24,10.77.30.0/24} ip daddr 10.77.10.10 icmp type echo-request counter accept
+  # No client-to-member-server admin access in the baseline.
+  limit rate 5/second log prefix "ADLAB-DROP " counter drop
+ }
+ chain output { type filter hook output priority 0; policy accept; }
+}
