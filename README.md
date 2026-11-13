@@ -66,3 +66,7 @@ From the repository root, run `python3 tests/validate_static.py` to check the to
 A graph edge is a hypothesis until its prerequisites are validated. An open port is not proof of lateral movement. A requested service ticket is not proof of a recovered password. Successful authentication is not proof of privileged authorization. Each finding needs source, destination, account context, UTC timestamps, raw artifact hash, observed result and a matched retest.
 
 Keep raw tickets, hashes, credentials, EVTX and BloodHound exports outside Git. Commit only reviewed, redacted reports. [Security and scope](SECURITY.md) • [References](docs/REFERENCES.md)
+
+## Usage terms
+
+Original material owned by 0xjyothendra requires written permission for modification or redistribution. Third-party content, assets, and earlier licensed releases retain their applicable terms. See [LICENSE](LICENSE).
