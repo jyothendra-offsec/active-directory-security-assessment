@@ -57,6 +57,10 @@ flowchart TD
 - `assets/`: original diagrams plus editable generation source.
 - `tests/`: static integrity checks; these do not substitute for Windows execution.
 
+## Verify the repository
+
+From the repository root, run `python3 tests/validate_static.py` to check the topology, local links and evidence templates. See the [validation boundary](docs/VALIDATION.md) for the Windows and network checks that require the lab. Use the [execution ledger](templates/execution-ledger.csv) to track each deployment and retest.
+
 ## Evidence standard
 
 A graph edge is a hypothesis until its prerequisites are validated. An open port is not proof of lateral movement. A requested service ticket is not proof of a recovered password. Successful authentication is not proof of privileged authorization. Each finding needs source, destination, account context, UTC timestamps, raw artifact hash, observed result and a matched retest.
